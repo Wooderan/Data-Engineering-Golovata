@@ -6,7 +6,7 @@ import os
 from flask import Flask, request
 from flask import typing as flask_typing
 
-from lesson_02.ht_template.job1.bll.sales_api import save_sales_to_local_disk
+from lesson02.ht_template.job1.bll.sales_api import save_sales_to_local_disk
 
 
 AUTH_TOKEN = os.environ.get("API_AUTH_TOKEN")
@@ -26,8 +26,8 @@ def main() -> flask_typing.ResponseReturnValue:
 
     Proposed POST body in JSON:
     {
-      "data: "2022-08-09",
-      "raw_dir": "/path/to/my_dir/raw/sales/2022-08-09"
+      "date: "2023-11-30",
+      "raw_dir": "/path/to/my_dir/raw/sales/2023-11-30"
     }
     """
     input_data: dict = request.json
