@@ -27,7 +27,7 @@ SELECT
 FROM sales
 ;
 
--- compare to the same operation, but check what the difference in the result
+-- compare to the same operation using GROUP BY
 SELECT
   client,
   COUNT(*) AS sales_count
