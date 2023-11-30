@@ -1,4 +1,4 @@
-from lesson_02.ht_template.job1.dal import local_disk, sales_api
+from lesson02.ht_template.job1.dal import local_disk, sales_api
 
 
 def save_sales_to_local_disk(date: str, raw_dir: str) -> None:
