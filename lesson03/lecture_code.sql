@@ -1,4 +1,4 @@
-create table raw (
+CREATE TABLE raw (
   client VARCHAR(50),
   purchase_date VARCHAR(50),
   product VARCHAR(50),
@@ -30,15 +30,15 @@ FROM sales
 -- compare to the same operation, but check what the difference in the result
 SELECT
   client,
-  count(*) AS sales_count
+  COUNT(*) AS sales_count
 FROM sales
-Group By client
+GROUP BY client
 ;
 
 -- LAG example
 SELECT
   client,
   purchase_date,
-  lag(purchase_date) over (partition BY client ORDER BY purchase_date) AS previous_purchase_date
+  LAG(purchase_date) OVER (PARTITION BY client ORDER BY purchase_date) AS previous_purchase_date
 FROM sales
 ;
