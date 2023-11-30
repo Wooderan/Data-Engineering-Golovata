@@ -26,7 +26,7 @@ def main() -> flask_typing.ResponseReturnValue:
 
     Proposed POST body in JSON:
     {
-      "date: "2023-11-30",
+      "date: "2022-08-09",
       "raw_dir": "/path/to/my_dir/raw/sales/2023-11-30"
     }
     """
