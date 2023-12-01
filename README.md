@@ -5,7 +5,7 @@
   ```
   git clone https://github.com/robot-dreams-code/Data-Engineering-Golovata.git
   ```
-  or You can get the link by clicking the `Clone or download` button in your repo.
+  or You can get the link by clicking the `Code` button in the repo.
 - Open the project folder in your IDE
 - Open a terminal in the project folder
 - Create a branch for the solution and switch on it
