@@ -34,5 +34,6 @@
 ## Create a Pull Request (PR)
 - Open your repo on GitHub and create a `Pull Request` (PR): `Pull requests` tab -> `New pull request`.
 - Select your branch in the dropdown (`base` should be `main` and `compare` is your `your_name/lessonNN` branch).
-- Verify the PR details and code (scroll down to see it) and confirm (`Create pull request` button). PR is updated automatically after a push to your branch on GitHub server
+- Verify the PR details and code (scroll down to see it) and confirm (`Create pull request` button). Add meaningful title and description, click `Create pull request` button.
+- PR is updated automatically after a push to your branch on GitHub server.
 - After updating your PR - click on re-request button at PR page IF YOU NEED ADDITIONAL REVIEW OF YOUR CODE.
