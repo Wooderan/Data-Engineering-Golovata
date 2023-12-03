@@ -1,6 +1,5 @@
 """
 Tests for main.py
-# TODO: write tests
 """
 from unittest import TestCase, mock
 
@@ -15,12 +14,7 @@ class MainFunctionTestCase(TestCase):
         main.app.testing = True
         cls.client = main.app.test_client()
 
-
-    @mock.patch('lesson_02.ht_template.job1.main.save_sales_to_local_disk')
-    def test_return_400_date_param_missed(
-            self,
-            get_sales_mock: mock.MagicMock
-        ):
+    def test_return_400_date_param_missed(self):
         """
         Raise 400 HTTP code when no 'date' param
         """
@@ -35,9 +29,16 @@ class MainFunctionTestCase(TestCase):
         self.assertEqual(400, resp.status_code)
 
     def test_return_400_raw_dir_param_missed(self):
-        pass
+        resp = self.client.post(
+            '/',
+            json = {
+                'date': '1970-01-01'
+            }
+        )
 
-    @mock.patch('lesson_02.ht_template.job1.main.save_sales_to_local_disk')
+        self.assertEqual(400, resp.status_code)
+
+    @mock.patch('lesson02.ht_template.job1.main.save_sales_to_local_disk')
     def test_save_sales_to_local_disk(
             self,
             save_sales_to_local_disk_mock: mock.MagicMock
@@ -60,9 +61,12 @@ class MainFunctionTestCase(TestCase):
             raw_dir=fake_raw_dir,
         )
 
-    @mock.patch('lesson_02.ht_template.job1.main.save_sales_to_local_disk')
-    def test_return_201_when_all_is_ok(
-            self,
-            get_sales_mock: mock.MagicMock
-    ):
-        pass
+    def test_return_201_when_all_is_ok(self):
+        resp = self.client.post(
+            '/',
+            json={
+                'date': '2022-08-09',
+                'raw_dir': '/tmp/data-engineering',
+            },
+        )
+        self.assertEqual(201, resp.status_code)

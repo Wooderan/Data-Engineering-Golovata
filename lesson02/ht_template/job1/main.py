@@ -39,6 +39,10 @@ def main() -> flask_typing.ResponseReturnValue:
         return {
             "message": "date parameter missed",
         }, 400
+    if not raw_dir:
+        return {
+            "message": "raw_dir parameter missed"
+        }, 400
 
     save_sales_to_local_disk(date=date, raw_dir=raw_dir)
 
