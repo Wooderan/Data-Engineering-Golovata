@@ -28,6 +28,15 @@ def main() -> flask_typing.ResponseReturnValue:
     raw_dir = input_data.get('raw_dir')
     stg_dir = input_data.get('stg_dir')
 
+    if not raw_dir:
+        return {
+            "message": "raw_dir parameter missed",
+        }, 400
+    if not stg_dir:
+        return {
+            "message": "stg_dir parameter missed"
+        }, 400
+
     stage_sales_on_local_disk(raw_dir=raw_dir, stg_dir=stg_dir)
 
     return {

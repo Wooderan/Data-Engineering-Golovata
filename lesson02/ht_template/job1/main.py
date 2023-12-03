@@ -31,7 +31,6 @@ def main() -> flask_typing.ResponseReturnValue:
     }
     """
     input_data: dict = request.json
-    # TODO: implement me
     date = input_data.get('date')
     raw_dir = input_data.get('raw_dir')
 
