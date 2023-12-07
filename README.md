@@ -6,7 +6,7 @@
   git clone https://github.com/robot-dreams-code/Data-Engineering-Golovata.git
   ```
   or You can get the link by clicking the `Code` button in the repo.
-  __NOTE__: you only need to do it once. To receive updates in origin repo run
+  **__NOTE__: you only need to do it once. To receive updates in origin repo run**
   ```sh
   git pull
   ```
