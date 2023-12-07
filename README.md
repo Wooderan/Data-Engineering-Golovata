@@ -6,6 +6,11 @@
   git clone https://github.com/robot-dreams-code/Data-Engineering-Golovata.git
   ```
   or You can get the link by clicking the `Code` button in the repo.
+  __NOTE__: you only need to do it once. To receive updates in origin repo run
+  ```sh
+  git pull
+  ```
+  in your local repo folder.
 - Open the project folder in your IDE
 - Open a terminal in the project folder
 - Create a branch for the solution and switch on it
