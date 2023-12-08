@@ -19,6 +19,7 @@ async def get_sales():
     url = 'https://fake-api-vycpfa6oca-uc.a.run.app/sales'
     async with aiohttp.ClientSession() as session:
         tasks = []
+        # see bug in the code?
         for page in range(1, 4):
             tasks.append(fetch_page_data(session, url, page))
         results = await asyncio.gather(*tasks)

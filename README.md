@@ -60,4 +60,4 @@
 - Verify the PR details and code (scroll down to see it) and confirm (`Create pull request` button). Add meaningful title and description, click `Create pull request` button.
 - PR is updated automatically after a push to your branch on GitHub server.
 - After updating your PR - click on re-request button at PR page IF YOU NEED ADDITIONAL REVIEW OF YOUR CODE.
-- DO NOT MERGE OR -1 POINT!
+- __DO NOT MERGE OR -1 POINT!__

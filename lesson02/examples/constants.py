@@ -1,9 +1,9 @@
 # Wrong:
 my_constant = 42
 
-# Wright:
+# Right:
 MY_CONSTANT = 42
 
 
 def foo():
-    MY_CONSTANT + 42
+    MY_CONSTANT + 422
