@@ -6,8 +6,14 @@ import os
 from flask import Flask, request
 from flask import typing as flask_typing
 
-from ht_template.job1.bll.sales_api import save_sales_to_local_disk
-from ht_template.job1.settings import AUTH_TOKEN
+from lesson02.ht_template.job1.bll.sales_api import save_sales_to_local_disk
+
+
+AUTH_TOKEN = os.environ.get("API_AUTH_TOKEN")
+
+if not AUTH_TOKEN:
+    print("AUTH_TOKEN environment variable must be set")
+
 
 app = Flask(__name__)
 
