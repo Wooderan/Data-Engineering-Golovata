@@ -1,0 +1,4 @@
+fastavro
+flask
+requests-mock
+pytest

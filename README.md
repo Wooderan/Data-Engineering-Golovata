@@ -1,22 +1,29 @@
 # Data-Engineering-Golovata
 
 ## Prepare the project
+- Recommend to install extension Git Graph or similar for ease navigation through the Git tree
+- To know in which branch you are now run
+  ```
+  git status
+  ```
+- Open terminal:Git Bash and change the current working dir to the location where you want the cloned repo
 - Clone the repo locally
   ```
   git clone https://github.com/robot-dreams-code/Data-Engineering-Golovata.git
   ```
   or You can get the link by clicking the `Code` button in the repo.
-  **__NOTE__: you only need to do it once. To receive updates in origin repo run (see section below)**
+  **__NOTE__: you only need to do it once. To receive updates in origin repo run pull (see section below)**
   ```sh
   git pull
   ```
   in your local repo folder.
-- Open the project folder in your IDE
+- Open the project folder in your IDE (location picked up before)
 - Open a terminal in the project folder
-- Create a branch for the solution and switch on it
+- Create a branch for the solution and switch on it by typing
   ```
   git checkout -b your_name/lessonNN
   ```
+  From now this branch is your 'main' - your local repo -  where you commit and push changes.
 - If there is 'requirements.txt` in lessonNN folder install the required packages:
   ```
   pip install -r requirements.txt

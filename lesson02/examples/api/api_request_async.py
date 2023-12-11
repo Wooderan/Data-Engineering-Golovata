@@ -20,7 +20,7 @@ async def get_sales():
     async with aiohttp.ClientSession() as session:
         tasks = []
         # see bug in the code?
-        for page in range(1, 4):
+        for page in range(1, 5):
             tasks.append(fetch_page_data(session, url, page))
         results = await asyncio.gather(*tasks)
         return results
