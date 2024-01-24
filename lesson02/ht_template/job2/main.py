@@ -6,13 +6,7 @@ import os
 from flask import Flask, request
 from flask import typing as flask_typing
 
-from lesson02.ht_template.job1.bll.sales_api import save_sales_to_local_disk
-
-
-AUTH_TOKEN = os.environ.get("API_AUTH_TOKEN")
-
-if not AUTH_TOKEN:
-    print("AUTH_TOKEN environment variable must be set")
+from lesson02.ht_template.job2.bll.sales_api import stage_sales_on_local_disk
 
 
 app = Flask(__name__)
@@ -31,19 +25,19 @@ def main() -> flask_typing.ResponseReturnValue:
     }
     """
     input_data: dict = request.json
-    date = input_data.get('date')
     raw_dir = input_data.get('raw_dir')
+    stg_dir = input_data.get('stg_dir')
 
-    if not date:
-        return {
-            "message": "date parameter missed",
-        }, 400
     if not raw_dir:
         return {
-            "message": "raw_dir parameter missed"
+            "message": "raw_dir parameter missed",
+        }, 400
+    if not stg_dir:
+        return {
+            "message": "stg_dir parameter missed"
         }, 400
 
-    save_sales_to_local_disk(date=date, raw_dir=raw_dir)
+    stage_sales_on_local_disk(raw_dir=raw_dir, stg_dir=stg_dir)
 
     return {
                "message": "Data retrieved successfully from API",
@@ -52,4 +46,4 @@ def main() -> flask_typing.ResponseReturnValue:
 
 if __name__ == "__main__":
     # app.run(debug=True, host="localhost", port=8081)
-    app.run(port=8081)
+    app.run(port=8082)
