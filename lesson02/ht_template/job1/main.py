@@ -3,9 +3,12 @@ This file contains the controller that accepts command via HTTP
 and trigger business logic layer
 """
 import os
+import sys
+
 from flask import Flask, request
 from flask import typing as flask_typing
 
+sys.path.append('/home/user/repos/DataEngineering.d/Data-Engineering-Golovata')
 from lesson02.ht_template.job1.bll.sales_api import save_sales_to_local_disk
 
 
